@@ -1,0 +1,34 @@
+{
+  "name": "driver",
+  "base": "user",
+  "idInjection": true,
+  "properties": {},
+  "validations": [],
+  "relations": {
+    "orders": {
+      "type": "hasMany",
+      "model": "order",
+      "foreignKey": "driverId"
+    },
+    "org": {
+      "type": "belongsTo",
+      "model": "org",
+      "foreignKey": "orgId"
+    }
+  },
+  "acls": [
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    },
+    {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "$owner",
+      "permission": "ALLOW"
+    }
+  ],
+  "methods": []
+}

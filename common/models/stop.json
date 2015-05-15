@@ -1,0 +1,23 @@
+{
+  "name": "stop",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "location": {
+      "type": "geopoint"
+    },
+    "arrive": {
+      "type": "date"
+    },
+    "depart": {
+      "type": "date"
+    },
+    "type": {
+      "type": "string"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

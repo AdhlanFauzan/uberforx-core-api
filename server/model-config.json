@@ -1,0 +1,54 @@
+{
+  "_meta": {
+    "sources": [
+      "loopback/common/models",
+      "loopback/server/models",
+      "../common/models",
+      "./models"
+    ]
+  },
+  "ACL": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "RoleMapping": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "Role": {
+    "dataSource": "mongo",
+    "public": false
+  },
+  "accessToken": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "org": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "user": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "driver": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "order": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "customer": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "route": {
+    "dataSource": "mongo",
+    "public": true
+  },
+  "stop": {
+    "dataSource": "mongo",
+    "public": true
+  }
+}

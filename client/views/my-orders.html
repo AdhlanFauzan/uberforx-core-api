@@ -1,0 +1,17 @@
+<section>
+  <article class="hide" ng-repeat="r in orders.slice().reverse()">
+    <header>
+      <h1>{{r.status}} &#9733;</h1>
+      <!-- <h2>{{r.driver.email}}</h2> -->
+    </header>
+    <p>{{r.comments}}</p>
+    <p>{{r.pickupAt}} - {{r.deliverAt}}</p>
+    <p>{{r.pickup}} - {{r.drop}}</p>
+    <p>{{r.rating}}&#9733; - {{r.comments}}</p>
+
+    <div class="actions" ng-show="currentUser">
+      <button ui-sref="edit-order({ id: r.id })">Edit</button>
+      <button a ui-sref="delete-order({ id: r.id })">Delete</button>
+    </div>
+  </article>
+</section>

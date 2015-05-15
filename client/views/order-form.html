@@ -1,0 +1,56 @@
+<section >
+<a href="" ng-click="addOrderForm=true">Add order</a>
+<button ng-click="addOrderForm=false">Hide</button> 
+  <form ng-show="addOrderForm" class="add-order-form" ="position:fixed; top:10px" name="form" ng-submit="submitForm()">
+    <fieldset>
+      <legend>{{action}} order form</legend>
+
+<!--       <div class="form-group">
+        <label>Org name</label>
+        <select
+            ng-disabled="isDisabled"
+            ng-model="selectedOrg"
+            ng-options="org as org.name for org in org"></select>
+      </div>
+-->
+
+<!--       <div class="form-group">
+        <label>Rating</label>
+        <input type="radio" ng-model="order.rating" value="1">1&#9733;
+        <input type="radio" ng-model="order.rating" value="2">2&#9733;
+        <input type="radio" ng-model="order.rating" value="3">3&#9733;
+        <input type="radio" ng-model="order.rating" value="4">4&#9733;
+        <input type="radio" ng-model="order.rating" value="5">5&#9733;
+      </div> -->
+      <div class="form-group">
+        <label>Pickup From</label>
+        <input type="number" ng-model="order.pickup">
+      </div>
+      <div class="form-group">
+        <label>Deliver To</label>
+        <input type="number" ng-model="order.drop">
+      </div>
+      <div class="form-group">
+        <label>Pickup At</label>
+        <input type="datetime-local" ng-model="order.pickupAt">
+      </div>
+       <div class="form-group">
+        <label>Deliver At</label>
+        <input type="datetime-local" ng-model="order.deliverAt">
+      </div>
+      <div class="form-group">
+        <label>Comments</label>
+        <textarea ng-model="order.comments"></textarea>
+      </div>
+
+      <div class="actions">
+        <label></label>
+        <button>{{action}} order</button>
+      </div>
+    </fieldset>
+  </form>
+  <map>
+  <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+</ui-gmap-google-map>
+  </map>
+<section>

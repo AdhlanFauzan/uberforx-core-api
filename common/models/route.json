@@ -1,0 +1,20 @@
+{
+  "name": "route",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "startTime": {
+      "type": "date"
+    },
+    "endTime": {
+      "type": "date"
+    },
+    "stops": {
+      "type": "object"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": []
+}

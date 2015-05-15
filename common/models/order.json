@@ -1,0 +1,56 @@
+{
+  "name": "order",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "properties": {
+    "createdAt": {
+      "type": "date"
+    },
+    "pickupAt": {
+      "type": "date"
+    },
+    "deliverAt": {
+      "type": "date"
+    },
+    "pickup":{
+      "type":"geopoint"
+    },
+    "drop":{
+      "type":"geopoint"
+    },
+    "status":{
+      "type":"string"
+    },
+    "createdBy":{
+      "type":"string"
+    },
+    "rating":{
+      "type":"number"
+    },
+    "comments":{
+      "type":"string"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "org": {
+      "type": "belongsTo",
+      "model": "org",
+      "foreignKey": "orgId"
+    },
+    "driver": {
+      "type": "belongsTo",
+      "model": "driver",
+      "foreignKey": "driverId"
+    },
+    "customer": {
+      "type": "belongsTo",
+      "model": "customer",
+      "foreignKey": "custId"
+    }
+  },
+  "acls": [
+
+  ],
+  "methods": []
+}
