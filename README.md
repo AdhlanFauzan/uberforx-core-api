@@ -3,7 +3,7 @@
 
 ```
 git clone
-cd loopback-getting-started-intermediate
+cd <repo_name>
 npm install
 slc run
 ```
