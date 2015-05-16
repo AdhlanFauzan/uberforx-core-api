@@ -13,6 +13,12 @@
   <p>{{o.createdAt}}</p>
   </div>
   </listing>
-  <ui-gmap-google-map center='map.center' zoom='map.zoom'>
+<!--   <ui-gmap-google-map center='map.center' zoom='map.zoom'>
   </ui-gmap-google-map>
-</section>
+ -->
+ <div ng-controller="mapController">
+   <map zoom="14" center="[43.6650000, -79.4103000]"></map>
+   <hr />
+   <p>Time: {{ date }}</p>
+ </div>
+ </section>

@@ -2,7 +2,7 @@ angular
   .module('app', [
     'ui.router',
     'lbServices',
-    'uiGmapgoogle-maps'
+    'ngMap'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
       $urlRouterProvider) {
