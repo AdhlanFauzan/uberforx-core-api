@@ -2,18 +2,16 @@ angular
   .module('app')
   .controller('AllOrdersController', ['$scope', 'Order', function($scope,
       Order) {
-    $scope.orders = Order.find({
+    $scope.orderList = Order.find({
     });
-    $scope.map = { center: { latitude: 19.1140324, longitude: 72.9237601 }, zoom:  14};
   }])
   .controller('AddOrderController', ['$scope', 'Org', 'Order',
       '$state', function($scope, Org, Order, $state) {
     $scope.action = 'Add';
-    // $scope.orgs = [];
     $scope.selectedOrg;
     $scope.order = {};
     $scope.isDisabled = false;
-    $scope.map = { center: { latitude: 19.1140324, longitude: 72.9237601 }, zoom:  14};
+    // $scope.map = { center: { latitude: 19.1140324, longitude: 72.9237601 }, zoom:  14};
 
     // Org
     //   .find()

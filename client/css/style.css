@@ -131,3 +131,5 @@ textarea {
 
 
 .angular-google-map-container { height: 400px; }
+
+map, div[map] {display:block; height:600px;}

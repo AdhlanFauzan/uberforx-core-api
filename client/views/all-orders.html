@@ -9,7 +9,7 @@
     <p>{{r.pickup}} - {{r.drop}}</p>
   </article> -->
   <listing class="listing-panel">
-  <div  ng-repeat="o in orders.slice().reverse()">
+  <div  ng-repeat="o in orderList.slice().reverse()">
   <p>{{o.createdAt}}</p>
   </div>
   </listing>
@@ -17,7 +17,9 @@
   </ui-gmap-google-map>
  -->
  <div ng-controller="mapController">
-   <map zoom="14" center="[43.6650000, -79.4103000]"></map>
+   <map center="19.1140324, 72.9237601" zoom="14" styles="{{mapStyle}}">
+     <marker ng-repeat="o in orderList" position="{{o.pickup.lat}}, {{o.pickup.lng}}"></marker>
+   </map>
    <hr />
    <p>Time: {{ date }}</p>
  </div>

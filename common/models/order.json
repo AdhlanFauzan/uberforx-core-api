@@ -27,7 +27,7 @@
     "rating":{
       "type":"number"
     },
-    "comments":{
+    "address":{
       "type":"string"
     }
   },

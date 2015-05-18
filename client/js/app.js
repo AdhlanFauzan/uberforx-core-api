@@ -16,8 +16,7 @@ angular
       .state('all-orders', {
         url: '/all-orders',
         templateUrl: 'views/all-orders.html',
-        controller: 'AllOrdersController',
-        authenticate: true
+        controller: 'AllOrdersController'
       })
       .state('edit-order', {
         url: '/edit-order/:id',
