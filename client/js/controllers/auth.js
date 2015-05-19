@@ -18,7 +18,7 @@ angular
       function($scope, AuthService, $state) {
     AuthService.logout()
       .then(function() {
-        $state.go('all-reviews');
+        $state.go('all-orders');
       });
   }])
   .controller('SignUpController', ['$scope', 'AuthService', '$state',

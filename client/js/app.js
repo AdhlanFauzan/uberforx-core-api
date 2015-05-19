@@ -2,7 +2,8 @@ angular
   .module('app', [
     'ui.router',
     'lbServices',
-    'ngMap'
+    'ngMap',
+    'btford.socket-io'
   ])
   .config(['$stateProvider', '$urlRouterProvider', function($stateProvider,
       $urlRouterProvider) {
@@ -67,4 +68,13 @@ angular
         $state.go('forbidden');
       }
     });
-  }]);
+  }])
+  .factory('socket', function (socketFactory) {
+  var myIoSocket = io.connect('http://localhost:5000');
+
+  mySocket = socketFactory({
+    ioSocket: myIoSocket
+  });
+
+  return mySocket;
+});

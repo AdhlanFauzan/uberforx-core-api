@@ -1,9 +1,18 @@
 angular
   .module('app')
-  .controller('AllOrdersController', ['$scope', 'Order', function($scope,
-      Order) {
+  .controller('AllOrdersController', ['$scope', 'Order','socket', function($scope,
+      Order, socket) {
+    $scope.drivers = [];
     $scope.orderList = Order.find({
     });
+    // for (var i = orderList.length - 1; i >= 0; i--) {
+    //   orderList[i]
+    // };
+    socket.on('users', function(data) { // Listening in Socket in Angular Controller
+      // $scope.drivers = JSON.parse(data);
+      console.log(data);
+    });
+
   }])
   .controller('AddOrderController', ['$scope', 'Org', 'Order',
       '$state', function($scope, Org, Order, $state) {
@@ -11,15 +20,7 @@ angular
     $scope.selectedOrg;
     $scope.order = {};
     $scope.isDisabled = false;
-    // $scope.map = { center: { latitude: 19.1140324, longitude: 72.9237601 }, zoom:  14};
 
-    // Org
-    //   .find()
-    //   .$promise
-    //   .then(function(orgs) {
-    //     $scope.orgs = orgs;
-    //     $scope.selectedOrg = $scope.selectedOrg || orgs[0];
-    //   });
 
     $scope.submitForm = function() {
       Order
@@ -27,8 +28,6 @@ angular
           pickupAt: $scope.order.pickupAt,
           deliverAt: $scope.order.dropAt,
           comments: $scope.order.comments
-
-          // orgId: $scope.selectedOrg.id
         })
         .$promise
         .then(function() {
