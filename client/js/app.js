@@ -75,6 +75,8 @@ angular
   mySocket = socketFactory({
     ioSocket: myIoSocket
   });
+  mySocket.forward('error');
+  mySocket.forward('admin:driverlist');
 
   return mySocket;
 });

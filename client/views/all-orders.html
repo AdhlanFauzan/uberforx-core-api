@@ -17,11 +17,14 @@
 <!--   <ui-gmap-google-map center='map.center' zoom='map.zoom'>
   </ui-gmap-google-map>
  -->
+ <div ng-controller="AllDriversController">
  <div ng-controller="mapController">
    <map center="19.1140324, 72.9237601" zoom="14" styles="{{mapStyle}}">
      <marker ng-repeat="o in orderList" position="{{o.pickup.lat}}, {{o.pickup.lng}}"></marker>
+     <marker ng-repeat="d in driverList" position="{{d.lat}}, {{d.lng}}"></marker>
    </map>
    <hr />
    <p>Time: {{ date }}</p>
+ </div>
  </div>
  </section>
